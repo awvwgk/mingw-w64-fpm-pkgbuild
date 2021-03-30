@@ -1,7 +1,7 @@
 _realname=fpm
 pkgbase=mingw-w64-${_realname}
 pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}"
-pkgver=0.1.4
+pkgver=0.2.0
 pkgrel=1
 arch=('any')
 pkgdesc="Fortran package manager (mingw-w64)"
@@ -11,7 +11,7 @@ makedepends=("${MINGW_PACKAGE_PREFIX}-gcc-fortran")
 options=('strip')
 license=('MIT')
 source=(${_realname}-${pkgver}.f90::"https://github.com/fortran-lang/fpm/releases/download/v${pkgver}/${_realname}-${pkgver}.f90")
-sha256sums=('06c139b16cf871e06cd3ea3be93c1ddbb5a94e4546a0c64822d10dc87333ac0c')
+sha256sums=('79d5041f5cebd1adff999017b3b5f88d8814267dbd0faaa0f7c720411ede463e')
 noextract=("${_realname}-${pkgver}.f90")
 
 build() {
