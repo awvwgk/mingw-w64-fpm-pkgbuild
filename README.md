@@ -2,24 +2,16 @@
 
 This repository provides package build instructions for the Fortran package manager ([fpm](https://github.com/fortran-lang/fpm)) compatible with the [MSYS2 toolchain](https://msys2.org).
 
-This project provides pre-built MinGW packages at the [release page](https://github.com/awvwgk/mingw-w64-fpm-pkgbuild/releases/latest).
-You can use the pre-built *fpm* package with
+The package build has been submitted to the MinGW repository [MINGW-packages#9481](https://github.com/msys2/MINGW-packages/pull/9481) and is now available in the MSYS2 distribution as [mingw-w64-fpm](https://packages.msys2.org/base/mingw-w64-fpm).
+Therefore, this project has been *archived*.
+
+To install fpm use
 
 ```
-wget https://github.com/awvwgk/mingw-w64-fpm-pkgbuild/releases/download/current/mingw-w64-x86_64-fpm-0.4.0-1-any.pkg.tar.zst
-pacman -U mingw-w64-x86_64-fpm-*-any.pkg.tar.zst
+pacman -S mingw-w64-x86_64-fpm
 ```
 
-Alternatively, you can install *fpm* by using `makepkg-mingw`
-
-```
-git clone https://github.com/awvwgk/mingw-w64-fpm-pkgbuild
-cd mingw-w64-fpm
-pacman -S base-devel mingw-w64-x86_64-toolchain
-MINGW_ARCH=mingw64 makepkg-mingw --syncdeps --cleanbuild --log --force
-pacman -U mingw-w64-x86_64-fpm-*-any.pkg.tar.zst
-```
-
+For more details on this project visit the [fpm wiki](https://github.com/fortran-lang/fpm/wiki/Packaging-Fpm#msys2-windows).
 
 ## License
 
